@@ -72,6 +72,7 @@ a {
 .manifesto-section,
 .projects-section,
 .atelier-section,
+.approach-section,
 .footer {
   padding-left: clamp(24px, 4vw, 52px);
   padding-right: clamp(24px, 4vw, 52px);
@@ -363,6 +364,35 @@ h3 {
     var(--surface-strong);
 }
 
+.approach-section {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  align-items: center;
+  gap: clamp(32px, 6vw, 72px);
+  padding-top: clamp(42px, 6vw, 68px);
+  padding-bottom: clamp(42px, 6vw, 68px);
+  background: var(--surface-strong);
+}
+
+.approach-copy {
+  display: grid;
+  gap: 18px;
+}
+
+.approach-copy p:not(.eyebrow) {
+  max-width: 56ch;
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.approach-image {
+  width: 100%;
+  aspect-ratio: 1.35;
+  object-fit: cover;
+  border-radius: var(--radius-large);
+  box-shadow: 0 20px 44px rgba(66, 44, 30, 0.14);
+}
+
 .manifesto-section::before {
   content: '';
   position: absolute;
@@ -500,6 +530,7 @@ h3 {
 @media (max-width: 1080px) {
   .hero-section,
   .atelier-section,
+  .approach-section,
   .split-heading,
   .footer {
     grid-template-columns: 1fr;
