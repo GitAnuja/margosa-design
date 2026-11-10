@@ -297,14 +297,20 @@ h3 {
 }
 
 .hero-card-wide {
+  position: relative;
   margin-top: 68px;
   height: 360px;
 }
 
+.hero-card-lower {
+  position: relative;
+  height: 302px;
+  margin: 0;
+}
+
 .hero-note {
-  position: absolute;
-  right: 14px;
-  bottom: 18px;
+  grid-column: 1 / -1;
+  justify-self: end;
   max-width: 260px;
   padding: 20px;
   background: rgba(35, 27, 21, 0.82);
@@ -583,6 +589,13 @@ h3 {
 
 .atelier-large,
 .atelier-small {
+  position: relative;
+  min-width: 0;
+  margin: 0;
+}
+
+.atelier-large,
+.atelier-small {
   border-radius: 28px;
   overflow: hidden;
   box-shadow: 0 20px 44px rgba(66, 44, 30, 0.14);
@@ -680,6 +693,10 @@ h3 {
     margin-top: 0;
   }
 
+  .hero-card-lower {
+    height: 242px;
+  }
+
   .atelier-gallery {
     min-height: auto;
   }
@@ -718,7 +735,8 @@ h3 {
   }
 
   .hero-card-tall,
-  .hero-card-wide {
+  .hero-card-wide,
+  .hero-card-lower {
     height: auto;
   }
 
