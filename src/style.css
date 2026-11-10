@@ -42,8 +42,9 @@ a {
 }
 
 img {
-  display: block;
+  /* display: block; */
   max-width: 100%;
+  display : none;
 }
 
 button,
